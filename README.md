@@ -1,7 +1,7 @@
 # Docker-Valgrind
 ![Docker Build Status](https://img.shields.io/docker/build/avitase/docker-valgrind.svg) ![Image Size](https://img.shields.io/microbadger/image-size/avitase/docker-valgrind.svg)
 
-The container exposes a leading edge version of `valgrind` and decent `cmake` and `g++` installations. The idea is to mount the root directory of your project to `/input` (read-only) and compile it in the container to a temporary directory. From here on one can run Valgrind and write the output to `/output`.
+The container exposes a leading edge version of `valgrind` (build from source) and decent `cmake` and `g++` installations. The idea is to mount the root directory of your project to `/input` (read-only) and compile it in the container to a temporary directory. From here on one can run Valgrind and write the output to `/output`.
 For example, consider the test project we provide in [test/](test/):
 ```
 > tree test/
