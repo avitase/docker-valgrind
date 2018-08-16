@@ -13,7 +13,7 @@ RUN apt-get install -yqq locales && locale-gen en_US.UTF-8
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
 
 RUN apt-get install -yqq \
-build-essential automake autoconf cmake 
+build-essential automake autoconf libc-dbg cmake 
 ENV CC /usr/bin/gcc
 ENV CXX /usr/bin/g++
 
