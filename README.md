@@ -9,7 +9,7 @@ test/
 ├── CMakeLists.txt
 └── test.cxx
 ```
-The `WORKDIR` is set to `/home/valgrind/build`, such that one can safely compile this test project, after mounting `-v "$SRC":/input:ro` and `-v "$PWD":/output`, via `cmake /input/`. Since `WORKDIR` is not part of a mounted volume, the result does not appear outside of the container. One can now run Valgrind and store the log file in `/output`, i.e:
+The `WORKDIR` is set to `/home/valgrind/build`, such that one can safely compile this test project, after mounting `-v "$SRC":/input:ro` and `-v "$PWD":/output`, via `cmake /input/ && make`. Since `WORKDIR` is not part of a mounted volume, the result does not appear outside of the container. One can now run Valgrind and store the log file in `/output`, i.e:
 ```
 valgrind --log-file=/output/valgrind.log ./a.out
 ```
