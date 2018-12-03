@@ -13,7 +13,7 @@ The `WORKDIR` is set to `/home/valgrind/build`, such that one can safely compile
 
 ## Docker Pull Command
 The container is accessible via the [Docker Hub](https://hub.docker.com/r/avitase/docker-valgrind/): `docker pull avitase/docker-valgrind`.
-You can create your own `Dockerfile` and install additional dependencies of your project via `apt-get`, for example:
+You can create your own `Dockerfile` and install additional dependencies of your project via `apk`, for example:
 ```
 FROM avitase/docker-valgrind:latest
 
